@@ -69,5 +69,21 @@ public class StatisticalAnalysis {
         System.out.println("Word count: " + numberOfWords());
     }
 
+    public int numberOfChars() {
+        CharIterator charIterator = new CharIterator(fileContent);
+
+        int counter = 0;
+        HashMap<Character, Integer> dictChars = new HashMap<>();
+        while (charIterator.hasNext()) {
+            charIterator.next();
+            counter++;
+        }
+        return counter;
+    }
+
+    public void displayCharCount() {
+        System.out.println("Char count: " + numberOfChars());
+    }
+
 
 }

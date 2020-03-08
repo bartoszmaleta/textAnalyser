@@ -22,6 +22,7 @@ public class Main {
         statisticalAnalysis.displayWordCount();
         statisticalAnalysis.displayDictionarySize();
 
-        statisticalAnalysis.displayDictionary();
+//        statisticalAnalysis.displayDictionary();
+        statisticalAnalysis.displayCharCount();
     }
 }

@@ -4,20 +4,15 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class CharIterator implements Iterator<Character> {
-    Character[] chars;
+    char[] chars;
     private int pos;
 
     public CharIterator(FileContent fileContent) {
         String allFile = fileContent.readFile();
-        System.out.println(allFile);
+//        System.out.println(allFile);
 
-        int lengthOfFile = fileContent.readFile().length();
-
-        this.chars = new Character[lengthOfFile];
-
-        for (int i = 0; i < lengthOfFile; i++) {
-            chars[i] = allFile.charAt(i);
-        }
+        chars = allFile.toCharArray();
+//        System.out.println(chars.length);
     }
 
 
